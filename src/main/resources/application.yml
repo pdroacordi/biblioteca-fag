@@ -16,8 +16,8 @@ server:
 
 springdoc:
   api-docs:
-    enabled: true
-    path: /api-docs
+    path: /v3/api-docs
   swagger-ui:
-    enabled: true
     path: /swagger-ui.html
+  packages-to-scan: io.acordi.msbiblioteca.entrypoint.controller
+  paths-to-match: /**

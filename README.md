@@ -42,14 +42,14 @@ spring:
 mvn spring-boot:run
 ```
 
-A aplicação estará disponível em: http://localhost:8080/api
+A aplicação estará disponível em: http://localhost:8080/
 
 ## Acessando o Swagger
 
 Para explorar e testar a API:
 
 1. Inicie a aplicação
-2. Acesse: http://localhost:8080/api/swagger-ui/index.html
+2. Acesse: http://localhost:8080/swagger-ui/index.html
 3. A interface exibirá todos os endpoints organizados por categorias
 
 Através do Swagger você pode:
