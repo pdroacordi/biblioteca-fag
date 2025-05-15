@@ -13,13 +13,11 @@ spring:
         format_sql: true
 server:
   port: 8080
-  servlet:
-    context-path: /api
 
 springdoc:
   api-docs:
+    enabled: true
     path: /api-docs
   swagger-ui:
+    enabled: true
     path: /swagger-ui.html
-    operations-sorter: method
-  packages-to-scan: io.acordi.msbiblioteca.*
