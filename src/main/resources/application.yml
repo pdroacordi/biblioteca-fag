@@ -22,4 +22,4 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
     operations-sorter: method
-  packages-to-scan: com.biblioteca.api.controller
+  packages-to-scan: io.acordi.msbiblioteca.*
