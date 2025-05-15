@@ -1,5 +1,6 @@
 package io.acordi.msbiblioteca.domain.entities;
 
+import io.acordi.msbiblioteca.config.StatusLivroConverter;
 import io.acordi.msbiblioteca.domain.types.StatusLivro;
 import jakarta.persistence.*;
 import java.util.HashSet;
@@ -19,9 +20,9 @@ public class Livro {
     @Column(name = "ano_publicacao")
     private Integer anoPublicacao;
 
-    @Enumerated(EnumType.STRING)
-    @Column(length = 10)
-    private StatusLivro status;
+    @Convert(converter = StatusLivroConverter.class)
+    @Column(name = "status", length = 20)
+    private StatusLivro status = StatusLivro.DISPONIVEL;
 
     @ManyToMany
     @JoinTable(
@@ -59,7 +60,7 @@ public class Livro {
     }
 
     public StatusLivro getStatus() {
-        return status;
+        return status != null ? status : StatusLivro.DISPONIVEL;
     }
 
     public void setStatus(StatusLivro status) {
